@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College of Science & Mathematics</title>
+  <link rel="icon" type="image/x-icon" href="../img/UPMIN.png" />
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+  <script>
+    $(document).ready(function () {
+      $("#acadunit__menu").menu();
+      $("#acadunit__button").click(function(){
+        $("#acadunit__menu").slideToggle(300);
+      });
+    });
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
+
+    #home_body {
+      margin: 0 200px 0 200px;
+      position: absolute;
+      scroll-behavior: smooth;
+    }
+
+    .up_header {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+    }
+
+    .university_header_picture {
+      width: 100px;
+      margin-left: 50px;
+      margin-top: 35px;
+      margin-bottom: -60px;
+    }
+
+    .up_header_nameschool {
+      font-family: 'Playfair Display', serif;
+      position: relative;
+      top: -40px;
+      left: 180px;
+      line-height: 20px;
+      margin-bottom: 100px;
+      font-size: 35px;
+      letter-spacing: 3.5px;
+      font-weight: bolder;
+      color: #8e171a;
+    }
+
+    .up_header_description {
+      text-align: center;
+      display: block;
+      margin-top: -120px;
+      padding-bottom: 35px;
+      font-size: 20px;
+      color: #8e171a;
+      font-weight: bold;
+    }
+
+    .up_navigation_menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 70px;
+      background: #444444;
+      width: auto;
+      position: relative;
+    }
+
+    .up_min_nav {
+      width: auto;
+    }
+
+    .up_navigation_menu button {
+      position: relative;
+      margin-right: 10px;
+      margin-left: 10px;
+      text-align: center;
+      color: whitesmoke;
+      font-family: 'Playfair Display', serif;
+      padding-top: 15px;
+      font-size: 15px;
+      text-decoration: none;
+      width: 230px;
+      padding: 15px 15px;
+      display: inline;
+      border: none;
+      background-color: #444444;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 710;
+    }
+
+    .up_navigation_menu button:hover {
+      color: rgb(255, 174, 0);
+      background-color: #2d2a2a;
+    }
+
+    /* Academic Unit Menu */
+
+    .ui-menu {
+      width: fit-content;
+      height: fit-content;
+
+    }
+
+    #acadunit__menu {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      transform: translateX(260px);
+      background-color: #444444;
+      border: 1px solid #444444;
+
+    }
+
+    .acadunit__menu-items {
+      height: 30px;
+    }
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover {
+      border: 1px solid #2d2a2a;
+      background: #2d2a2a;
+      font-weight: normal;
+      color: #ffae00;
+    }
+
+    .ui-menu-item-wrapper {
+      height: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .acadunit__menu-items-link {
+      text-decoration: none;
+      font-family: "Lato", sans-serif;
+    }
+
+    /* main */
+    main {
+      margin: 10px 0;
+    }
+
+    #CSM__header-container {
+      display: flex;
+      padding: 10px 50px;
+      background-color: #8e171a;
+      border-radius: 10px 10px 0 0;
+    }
+
+    #CSM__header-logo {
+      height: 100px;
+      margin-right: 15px;
+    }
+
+    #CSM__header-name {
+      font-family: "Playfair Display", serif;
+      height: fit-content;
+      color: white;
+      margin: 20px 0 0 0;
+    }
+
+    #CSM__acadprog-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: small;
+    }
+
+    .CSM__acadprog-list-items {
+      cursor: pointer;
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      margin: 0 10px 0 0;
+    }
+
+    /* faculty */
+    #CSM__faculty-container {
+      padding: 20px 50px;
+      border: 1px solid #8e171a;
+      background-color: rgba(64, 67, 64, 0.1);
+      border-radius: 0 0 10px 10px;
+    }
+
+    #CSM__faculty-header {
+      font-family: "Playfair Display", serif;
+      margin: 0 0 20px 0;
+      font-size: x-large;
+    }
+
+    h3 {
+      font-family: "Lato", sans-serif;
+      margin: 20px 0 5px 0;
+    }
+
+    table {
+      width: 100%;
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+</head>
+
+<body id="home_body" style="background-color: rgba(223, 218, 212, 0.637); position: absolute;">
+  <header>
+    <div class="up_header">
+      <a href="index.html"><img class="university_header_picture" src="img/up_min_logo.png" alt="univ-picture"></a>
+      <h1 class="up_header_nameschool">University of the Philippines Mindanao</h1>
+      <i class="up_header_description">Shaping minds that shape the nation</i>
+    </div>
+    <div class="up_navigation">
+      <div class="up_navigation_menu">
+        <button rel="home" class="button" onclick="window.open('index.html','_self');">Home</button>
+        <button id="acadunit__button">Academic Units</button>
+        <button rel="acadprog" class="button"  onclick="window.open('acadprog.html','_self');">Academic Programs</button>
+        <button  onclick="window.open('sign.html','_self');">Sign Up</button>
+      </div>
+      <ul id="acadunit__menu">
+        <li class="acadunit__menu-items">
+          <div><a class="acadunit__menu-items-link" href="CHSS.html" style="color: white;">College of Humanities
+              and Social Sciences</a></div>
+        </li>
+        <li class="acadunit__menu-items">
+          <div><a class="acadunit__menu-items-link" href="CSM.html" style="color: white;">College of Science and
+              Mathematics</a></div>
+        </li>
+        <li class="acadunit__menu-items">
+          <div><a class="acadunit__menu-items-link" href="SOM.html" style="color: white;">School of Management</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div id="CSM__header-container">
+      <img id="CSM__header-logo" src="img/CSM.png" alt="CSM Logo" />
+      <div id="CSM__header-content-container">
+        <h1 id="CSM__header-name">College of Science and Mathematics</h1>
+        <ul id="CSM__acadprog-list">
+          <li class="CSM__acadprog-list-items">BS Applied Mathematics</li>
+          <li class="CSM__acadprog-list-items">BS Biology</li>
+          <li class="CSM__acadprog-list-items">BS Computer Science</li>
+          <li class="CSM__acadprog-list-items">BS Food Technology</li>
+        </ul>
+      </div>
+    </div>
+    <div id="CSM__faculty-container">
+      <div>
+        <h1 id="CSM__faculty-header">CSM Faculty Members</h1>
+      </div>
+      <div>
+        <h3>Department of Biological Sciences and Environmental Studies</h3>
+        <table>
+          <tr>
+            <td style="width: 18%">ACHONDO</td>
+            <td style="width: 22%" Marion John M.</td>
+            <td>MS Zoology</td>
+          </tr>
+          <tr>
+            <td>BAYOGAN</td>
+            <td>Emma Ruth V.</td>
+            <td>PhD Horticulture</td>
+          </tr>
+          <tr>
+            <td>CAMINO</td>
+            <td>Fritzie A.</td>
+            <td>MS Biology</td>
+          </tr>
+          <tr>
+            <td>DE CADIZ</td>
+            <td>Aleyla E.</td>
+            <td>PhD Biomedical Science</td>
+          </tr>
+          <tr>
+            <td>DE LA TORRE</td>
+            <td>Von Carlo P.</td>
+            <td>MS Biology</td>
+          </tr>
+          <tr>
+            <td>DELIMA</td>
+            <td>Aileen Grace D.</td>
+            <td>MS Plant Genetic Resources Conservation</td>
+          </tr>
+          <tr>
+            <td>GAMALO</td>
+            <td>Lief Erikson D.</td>
+            <td>MS Zoology</td>
+          </tr>
+          <tr>
+            <td>GAMBOA</td>
+            <td>Ruth U.</td>
+            <td>PhD Marine Biology</td>
+          </tr>
+          <tr>
+            <td>MANTIQUILLA</td>
+            <td>Junaldo A.</td>
+            <td>MS Biology (on study leave)</td>
+          </tr>
+          <tr>
+            <td>MIJARES</td>
+            <td>Jasper Elvin C.</td>
+            <td>To be updated</td>
+          </tr>
+          <tr>
+            <td>MILLADO</td>
+            <td>Cyrose Suzie S.</td>
+            <td>MS Plant Breeding and Crop Improvement</td>
+          </tr>
+          <tr>
+            <td>MURAO</td>
+            <td>Lyre Anni E.</td>
+            <td>PhD Medical Science in Infection Research</td>
+          </tr>
+          <tr>
+            <td>NAÑOLA JR.</td>
+            <td>Cleto L.</td>
+            <td>PhD Marine Science</td>
+          </tr>
+          <tr>
+            <td>NOVERO</td>
+            <td>Annabelle U.</td>
+            <td>PhD Plant Molecular Biology</td>
+          </tr>
+          <tr>
+            <td>RAGANAS</td>
+            <td>Aaron Froilan</td>
+            <td>MS Botany</td>
+          </tr>
+          <tr>
+            <td>RESPONTE</td>
+            <td>Mae A.</td>
+            <td>MS Biology</td>
+          </tr>
+        </table>
+        <h3>Department of Food Science and Chemistry</h3>
+        <table>
+          <tr>
+            <td style="width: 18%">ALVIOLA</td>
+            <td style="width: 22%">Juma Novie A.</td>
+            <td>PhD Food Science and Technology</td>
+          </tr>
+          <tr>
+            <td>CALUMBA</td>
+            <td>Kriza Faye A.</td>
+            <td>MS Food Science</td>
+          </tr>
+          <tr>
+            <td>DACERA</td>
+            <td>Dominica DM.</td>
+            <td>PhD Environmental Technology</td>
+          </tr>
+          <tr>
+            <td>DEL MUNDO</td>
+            <td>Dann Marie N.</td>
+            <td>PhD Food Technology</td>
+          </tr>
+          <tr>
+            <td>DUERME</td>
+            <td>Khent Ivan M.</td>
+            <td>To be updated</td>
+          </tr>
+          <tr>
+            <td>FRONTERAS</td>
+            <td>Jennifer P.</td>
+            <td>MS Biochemistry</td>
+          </tr>
+          <tr>
+            <td>FUNDADOR</td>
+            <td>Noreen Grace</td>
+            <td>PhD Polymer Science</td>
+          </tr>
+          <tr>
+            <td>FUNDADOR</td>
+            <td>Erwin Oliver V.</td>
+            <td>PhD Chemistry</td>
+          </tr>
+          <tr>
+            <td>PATINDOL</td>
+            <td>James A.</td>
+            <td>To be updated</td>
+          </tr>
+          <tr>
+            <td>TAGUBASE</td>
+            <td>Jackie Lou J.</td>
+            <td>PhD Global Agricultural Science</td>
+          </tr>
+          <tr>
+            <td>TOLENTINO</td>
+            <td>Joel Hassan G.</td>
+            <td>PhD Chemistry</td>
+          </tr>
+          <tr>
+            <td>VILLAME</td>
+            <td>Rovi Gem E.</td>
+            <td>MS Food Science (Microbiology)</td>
+          </tr>
+        </table>
+        <h3>Department of Mathematics, Physics, and Computer Science</h3>
+        <table>
+          <tr>
+            <td style="width: 18%">ACOSTA</td>
+            <td style="width: 22%">Joseph E.</td>
+            <td>PhD Agricultural Engineering</td>
+          </tr>
+          <tr>
+            <td>CALAG</td>
+            <td>Vicente B.</td>
+            <td>MS Computer Science</td>
+          </tr>
+          <tr>
+            <td>CATANE</td>
+            <td>Jose Ricardo M.</td>
+            <td>MS Telecommunication Engineering</td>
+          </tr>
+          <tr>
+            <td>DIAMANTE</td>
+            <td>Eliezer O.</td>
+            <td>BS Applied Mathematics</td>
+          </tr>
+          <tr>
+            <td>ESTAÑA</td>
+            <td>Leo Manuel B.</td>
+            <td>MS Applied Mathematics</td>
+          </tr>
+          <tr>
+            <td>EVANGELIO</td>
+            <td>Sherelyn A.</td>
+            <td>BS Applied Mathematics</td>
+          </tr>
+          <tr>
+            <td>GAMOT</td>
+            <td>Ritchie Mae T.</td>
+            <td>PhD Scientific Computing</td>
+          </tr>
+          <tr>
+            <td>GUILLERMO</td>
+            <td>Miguel Carlo S.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td>KOBAYASHI</td>
+            <td>Vladimer B.</td>
+            <td>PhD Learning Analytics</td>
+          </tr>
+          <tr>
+            <td>LIGUE</td>
+            <td>Kim Dianne B.</td>
+            <td>MS Information Technology</td>
+          </tr>
+          <tr>
+            <td>MANLIGUEZ</td>
+            <td>Cinmayii G.</td>
+            <td>PhD Computer Science</td>
+          </tr>
+          <tr>
+            <td>MATA</td>
+            <td>May Anne E.</td>
+            <td>PhD Applied Mathematics</td>
+          </tr>
+          <tr>
+            <td>MONTAJES</td>
+            <td>Kenneth P.</td>
+            <td>BS Applied Mathematics (Operations Research)</td>
+          </tr>
+          <tr>
+            <td>OGUIS</td>
+            <td>Giovanna Faye R.</td>
+            <td>PhD Applied Mathematics</td>
+          </tr>
+          <tr>
+            <td>REAL</td>
+            <td>Rommel R.</td>
+            <td>PhD Mathematics</td>
+          </tr>
+          <tr>
+            <td>ROSERO</td>
+            <td>El Veena Grace</td>
+            <td>BS Computer Science</td>
+          </tr>
+          <tr>
+            <td>RUBRICO</td>
+            <td>Jose Ildefonso U.</td>
+            <td>PhD Engineering</td>
+          </tr>
+          <tr>
+            <td>SANTILLAN</td>
+            <td>Jon Henly O.</td>
+            <td>Master of Information Systems</td>
+          </tr>
+          <tr>
+            <td>SATINA</td>
+            <td>Armacheska M.</td>
+            <td>PhD Computer Science</td>
+          </tr>
+          <tr>
+            <td>USARES</td>
+            <td>Maynard U.</td>
+            <td>MS Environmental & Resource Mgt.</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

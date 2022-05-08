@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School of Management</title>
+  <link rel="icon" type="image/x-icon" href="/img/UPMIN.png" />
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css" />
+  <script>
+    $(document).ready(function () {
+      $("#acadunit__menu").menu();
+      $("#acadunit__button").click(function () {
+        $("#acadunit__menu").slideToggle(300);
+      });
+    });
+  </script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap");
+
+    #home_body {
+      margin: 0 200px 0 200px;
+      position: absolute;
+      scroll-behavior: smooth;
+    }
+
+    .up_header {
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+    }
+
+    .university_header_picture {
+      width: 100px;
+      margin-left: 50px;
+      margin-top: 35px;
+      margin-bottom: -60px;
+    }
+
+    .up_header_nameschool {
+      font-family: "Playfair Display", serif;
+      position: relative;
+      top: -40px;
+      left: 180px;
+      line-height: 20px;
+      margin-bottom: 100px;
+      font-size: 35px;
+      letter-spacing: 3.5px;
+      font-weight: bolder;
+      color: #8e171a;
+    }
+
+    .up_header_description {
+      text-align: center;
+      display: block;
+      margin-top: -120px;
+      padding-bottom: 35px;
+      font-size: 20px;
+      color: #8e171a;
+      font-weight: bold;
+    }
+
+    .up_navigation_menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 70px;
+      background: #444444;
+      width: auto;
+      position: relative;
+    }
+
+    .up_min_nav {
+      width: auto;
+    }
+
+    .up_navigation_menu button {
+      position: relative;
+      margin-right: 10px;
+      margin-left: 10px;
+      text-align: center;
+      color: whitesmoke;
+      font-family: "Playfair Display", serif;
+      padding-top: 15px;
+      font-size: 15px;
+      text-decoration: none;
+      width: 230px;
+      padding: 15px 15px;
+      display: inline;
+      border: none;
+      background-color: #444444;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: 710;
+    }
+
+    .up_navigation_menu button:hover {
+      color: rgb(255, 174, 0);
+      background-color: #2d2a2a;
+    }
+
+    /* Academic Unit Menu */
+
+    .ui-menu {
+      width: fit-content;
+      height: fit-content;
+    }
+
+    #acadunit__menu {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      transform: translateX(260px);
+      background-color: #444444;
+      border: 1px solid #444444;
+    }
+
+    .acadunit__menu-items {
+      height: 30px;
+    }
+
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active,
+    a.ui-button:active,
+    .ui-button:active,
+    .ui-button.ui-state-active:hover {
+      border: 1px solid #2d2a2a;
+      background: #2d2a2a;
+      font-weight: normal;
+      color: #ffae00;
+    }
+
+    .ui-menu-item-wrapper {
+      height: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    .acadunit__menu-items-link {
+      text-decoration: none;
+      font-family: "Lato", sans-serif;
+    }
+
+    /* main */
+
+    main {
+      margin: 10px 0;
+    }
+
+    #SOM__header-container {
+      display: flex;
+      padding: 10px 50px;
+      background-color: #8e171a;
+      border-radius: 10px 10px 0 0;
+    }
+
+    #SOM__header-logo {
+      height: 100px;
+      margin-right: 15px;
+    }
+
+    #SOM__header-name {
+      font-family: "Playfair Display", serif;
+      height: fit-content;
+      color: white;
+      margin: 20px 0 0 0;
+    }
+
+    #SOM__acadprog-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: small;
+    }
+
+    .SOM__acadprog-list-items {
+      cursor: pointer;
+      color: white;
+      font-family: "Lato", sans-serif;
+      font-weight: bold;
+      margin: 0 10px 0 0;
+    }
+
+    /* faculty */
+    #SOM__faculty-container {
+      padding: 20px 50px;
+      border: 1px solid #8e171a;
+      background-color: rgba(64, 67, 64, 0.1);
+      border-radius: 0 0 10px 10px;
+    }
+
+    #SOM__faculty-header {
+      font-family: "Playfair Display", serif;
+      margin: 0 0 20px 0;
+      font-size: x-large;
+    }
+
+    h3 {
+      font-family: "Lato", sans-serif;
+    }
+
+    table {
+      width: 100%;
+      font-family: "Lato", sans-serif;
+    }
+  </style>
+</head>
+
+<body id="home_body" style="background-color: rgba(223, 218, 212, 0.637); position: absolute">
+  <header>
+    <div class="up_header">
+      <a href="index.html"><img class="university_header_picture" src="img/up_min_logo.png" alt="univ-picture"></a>
+      <h1 class="up_header_nameschool">
+        University of the Philippines Mindanao
+      </h1>
+      <i class="up_header_description">Shaping minds that shape the nation</i>
+    </div>
+    <div class="up_navigation">
+      <div class="up_navigation_menu">
+        <button rel="home" class="button" onclick="window.open('index.html','_self');">
+          Home
+        </button>
+        <button id="acadunit__button">Academic Units</button>
+        <button rel="acadprog" class="button" onclick="window.open('acadprog.html','_self');">Academic Programs</button>
+        <button  onclick="window.open('sign.html','_self');">Sign Up</button>
+      </div>
+      <ul id="acadunit__menu">
+        <li class="acadunit__menu-items">
+          <div>
+            <a class="acadunit__menu-items-link" href="CHSS.html" style="color: white">College of Humanities and Social
+              Sciences</a>
+          </div>
+        </li>
+        <li class="acadunit__menu-items">
+          <div>
+            <a class="acadunit__menu-items-link" href="CSM.html" style="color: white">College of Science and
+              Mathematics</a>
+          </div>
+        </li>
+        <li class="acadunit__menu-items">
+          <div>
+            <a class="acadunit__menu-items-link" href="SOM.html" style="color: white">School of Management</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div id="SOM__header-container">
+      <img id="SOM__header-logo" src="img/SOM.png" alt="SOM Logo" />
+      <div id="SOM__header-content-container">
+        <h1 id="SOM__header-name">School of Management</h1>
+        <ul id="SOM__acadprog-list">
+          <li class="SOM__acadprog-list-items">PhD By Research</li>
+          <li class="SOM__acadprog-list-items">Master in Management</li>
+          <li class="SOM__acadprog-list-items">BS Agribusiness Economics</li>
+        </ul>
+      </div>
+    </div>
+    <div id="SOM__faculty-container">
+      <div>
+        <h1 id="SOM__faculty-header">SOM Faculty Members</h1>
+      </div>
+      <div>
+        <table>
+          <tr>
+            <td style="width: 18%">ACOPIADO</td>
+            <td style="width: 22%">Imee Marie A.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td>ACUÑA</td>
+            <td>Thaddeus R.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td>AGUINALDO</td>
+            <td>Roxanne T.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td>ALVIOLA</td>
+            <td>Pedro IV A.</td>
+            <td>Ph.D. Agricultural Economics</td>
+          </tr>
+          <tr>
+            <td>CASTRO</td>
+            <td>Miko Mariz C.</td>
+            <td>MS Agricultural Economics</td>
+          </tr>
+          <tr>
+            <td>DIGAL</td>
+            <td>Larry N.</td>
+            <td>Ph.D. in Agricultural Economics</td>
+          </tr>
+          <tr>
+            <td>GOMEZ</td>
+            <td>Aurelia Luzviminda V.</td>
+            <td>Ph.D. in Natural Resource Management</td>
+          </tr>
+          <tr>
+            <td>LAORDEN</td>
+            <td>Nikko L.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td>LOPEZ</td>
+            <td>Rodgessa A.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td>PLACENCIA</td>
+            <td>Shemaiah Gail P.</td>
+            <td>BS Agribusiness Economics</td>
+          </tr>
+          <tr>
+            <td>ROMO</td>
+            <td>Glory Dee A.</td>
+            <td>Doctor of Philosophy</td>
+          </tr>
+          <tr>
+            <td>SARMIENTO</td>
+            <td>Jon Marx P.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td>SHUCK</td>
+            <td>Vlademir A.</td>
+            <td>Master in Management</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>Updated: 20 April 2022</td>
+          </tr>
+          <tr>
+            <td height="28" colspan="2">
+              <strong>Pool of Lecturers</strong>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>ACOSTA</td>
+            <td>Maria Belen S.</td>
+            <td>BS in Communication(UPDil), Master in Management(UPMin)</td>
+          </tr>
+          <tr>
+            <td>ANICETO-GUINOMLA</td>
+            <td>Marianne Esther G.</td>
+            <td>
+              Bachelor of Arts in Sociology (UPD), Bachelor of Laws (UPD)
+            </td>
+          </tr>
+          <tr>
+            <td>APOLINARES</td>
+            <td>Rennel John Vincent C.</td>
+            <td>
+              BS Agibusiness Economics (UPMin), Master in Management (UPMin)
+            </td>
+          </tr>
+          <tr>
+            <td>BiñAS</td>
+            <td>Junmar M.</td>
+            <td>BA Psychology (USM), Master in Management(UPMin)</td>
+          </tr>
+          <tr>
+            <td>CRUZ</td>
+            <td>Marvin M.</td>
+            <td>
+              BS in Mechanical Engineering (Mapua Institute of Technology),
+              Master in Business Administration (AdDU), Doctor of Business
+              Administration (DLSU)
+            </td>
+          </tr>
+          <tr>
+            <td>DACALAÑO</td>
+            <td>Jimmy R.</td>
+            <td>
+              BS in Mechanical Engineering (Mapua Institute of Technology),
+              Master in Management (UPMin)
+            </td>
+          </tr>
+          <tr>
+            <td>DURANA</td>
+            <td>Annalee D.</td>
+            <td>
+              BS in Fisheries (MSU-GenSan), Master in Management (UPMIN)
+            </td>
+          </tr>
+          <tr>
+            <td>EBARLE</td>
+            <td>Jocip L.</td>
+            <td>
+              BS in Electrical Engineering (CIT), Master of Statistics
+              (UPDiliman), Master in Business Administration (AdDU)
+            </td>
+          </tr>
+          <tr>
+            <td>GILLES</td>
+            <td>Pierre Giuseppe P.</td>
+            <td>BS Agribusiness Economics (UPMin)</td>
+          </tr>
+          <tr>
+            <td>HERNANDEZ</td>
+            <td>Maria Corazon A.</td>
+            <td>
+              Lecturer, BS in Accountancy (AdDU), Master in Management (UPMin)
+            </td>
+          </tr>
+          <tr>
+            <td>JOSOL</td>
+            <td>Charlene P.</td>
+            <td>BSBA (AdDU), Master in Management (UPMin)</td>
+          </tr>
+          <tr>
+            <td>LAO</td>
+            <td>Francis E.</td>
+            <td>
+              BS in Mechanical Engineering (Cebu Institute of Technology),
+              Master in Management (UPMin)
+            </td>
+          </tr>
+          <tr>
+            <td>LIBRANZA</td>
+            <td>Alexander Ken P.</td>
+            <td>
+              BS Agibusiness Economics (UPMin), Master in Applied Business
+              Analytics (University of Asia and the Pacific)
+            </td>
+          </tr>
+          <tr>
+            <td>MENDOZA</td>
+            <td>Lionel D.</td>
+            <td>BS Economics, Master in Management(UPMin)</td>
+          </tr>
+          <tr>
+            <td>MONTIFLOR</td>
+            <td>Marilou O.</td>
+            <td>
+              BA in Sociology (UPLB), Master of Dev't Communication(UPOU),
+              Master of Philosophy(Rural Mgt) Curtin University, Australia
+            </td>
+          </tr>
+          <tr>
+            <td>PABULARCON</td>
+            <td>Liza N., Lecturer</td>
+            <td>
+              BS in Accountancy (Notre Dame of Midsayap College), Master in
+              Management (UPMin)
+            </td>
+          </tr>
+          <tr>
+            <td>PARABA</td>
+            <td>Rene S.</td>
+            <td>BS in Math (MSU-GSC), Master in Management (UPMin)</td>
+          </tr>
+          <tr>
+            <td>PARREÑO</td>
+            <td>Liza Elsie E.</td>
+            <td>BS in Agriculture (UPLB), Master in Management (UPMin)</td>
+          </tr>
+          <tr>
+            <td>REAL</td>
+            <td>Rodel R.</td>
+            <td>BS Agribusiness Economics (UPMin)</td>
+          </tr>
+          <tr>
+            <td>TEO</td>
+            <td>Roberto U.</td>
+            <td>
+              BS in Chemical Engineering (DLSU), Master of Business Management
+              (AIM)
+            </td>
+          </tr>
+          <tr>
+            <td>TRAJE</td>
+            <td>Adonis M.</td>
+            <td>
+              BS Agriculture Plant Pathology (UPLB), Master in
+              Management(UPMin)
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
